@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PBL0203 - Dataset Iris</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h2>Dataset Iris (Kaggle)</h2>
+<p>Menampilkan 20 data pertama</p>
+
+<table>
+    <tr>
+        {% for col in columns %}
+        <th>{{ col }}</th>
+        {% endfor %}
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        {% for col in columns %}
+        <td>{{ row[col] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
